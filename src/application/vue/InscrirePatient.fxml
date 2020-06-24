@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.InscrireController">
+   <children>
+      <Label layoutX="276.0" layoutY="34.0" text="Inscrivez un patient">
+         <font>
+            <Font name="Gadugi" size="20.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="144.0" layoutY="100.0" prefHeight="324.0" prefWidth="487.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="164.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="358.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nom" />
+            <Label text="Prenom" GridPane.rowIndex="1" />
+            <Label text="Date de Naissance" GridPane.rowIndex="2" />
+            <Label text="Adresse" GridPane.rowIndex="3" />
+            <Label text="Téléphone" GridPane.rowIndex="4" />
+            <Label text="Email" GridPane.rowIndex="5" />
+            <TextField fx:id="nom" prefHeight="25.0" prefWidth="296.0" GridPane.columnIndex="1" />
+            <TextField fx:id="prenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="adresse" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="tel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <DatePicker fx:id="date_n" prefHeight="25.0" prefWidth="354.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <JFXButton fx:id="button_inscrire" layoutX="200.0" layoutY="455.0" onMouseClicked="#doAjouter" prefHeight="43.0" prefWidth="140.0" style="-fx-background-color: BLUE;" text="Inscrire" textFill="WHITE" />
+      <JFXButton fx:id="button_supprimer" cancelButton="true" layoutX="421.0" layoutY="455.0" onMouseClicked="#doEffacer" prefHeight="43.0" prefWidth="140.0" style="-fx-background-color: RED;" text="Effacer" textFill="WHITE" />
+   </children>
+</AnchorPane>
